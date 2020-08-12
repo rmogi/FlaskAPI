@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "C:\\Users\\leno6\\anaconda3\\envs\\FlaskAPI\\python.exe",
+    "python.linting.pylintArgs": ["--load-plugins", "pylint_flask_sqlalchemy", "pylint_flask"]
+}
