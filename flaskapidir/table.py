@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 engine = create_engine(
-    'postgresql://postgres:@localhost:5432/mydb',
+    'postgresql://postgres:Skywill99@localhost:5432/mydb',
     echo=False)
 
 # テーブル定義のベース
