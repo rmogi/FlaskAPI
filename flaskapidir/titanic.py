@@ -1,8 +1,8 @@
 import pandas as pd
-import numpy as np
 import pickle
 # scikit-learnをインポート
 from sklearn import tree
+from flask import request, redirect, url_for, render_template
 
 
 def decision_tree():
@@ -14,11 +14,11 @@ def decision_tree():
 
         # 「test」の説明変数の値を取得
         test_features = test_data[["Pclass", "Sex", "Age", "Fare"]].values
-        # 「test」の説明変数を使って「my_tree_one」のモデルで予測
+        # 「test」の説明変数を使って「tree」のモデルで予測
         prediction = tree.predict(test_features)
 
-        return prediction()
+        #return redirect(request.url)
 
-    return render_template('result.html')
+    return render_template('./result.html')
 
     # print(prediction)
