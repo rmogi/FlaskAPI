@@ -3,11 +3,14 @@ import csv
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 
+# アップロードされる拡張子の制限
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'csv'}
+
 
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 
 def _upload_file(upload_folder):
     if request.method == 'POST':
@@ -23,4 +26,3 @@ def _upload_file(upload_folder):
             file.save(os.path.join(upload_folder, filename))
             return redirect(request.url)
     return render_template('upload.html')
-
