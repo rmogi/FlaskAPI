@@ -2,6 +2,7 @@ import os
 import csv
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
+from dataset import database_set
 
 
 # アップロードされる拡張子の制限
@@ -27,3 +28,4 @@ def _upload_file(upload_folder):
             file.save(os.path.join(upload_folder, filename))
             return redirect(request.url)
     return render_template('upload.html')
+database_set()
