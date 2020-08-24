@@ -2,7 +2,6 @@ from flask import Flask
 from upload import _upload_file
 from titanic import decision_tree
 
-
 # ファイルアップロード先のディレクトリ
 UPLOAD_FOLDER = './flaskapidir/uploads'
 

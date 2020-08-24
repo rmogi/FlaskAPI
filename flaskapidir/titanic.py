@@ -15,10 +15,12 @@ def decision_tree():
         # 「test」の説明変数の値を取得
         test_features = test_data[["Pclass", "Sex", "Age", "Fare"]].values
         # 「test」の説明変数を使って「tree」のモデルで予測
-        prediction = tree.predict(test_features)
+        
+        #prediction = tree.predict(test_features)
+        #predict_Confidence = str(predict_Confidence)
 
         #return redirect(request.url)
 
-    return render_template('./result.html')
+    return render_template('result.html', predict_Confidence=predict_Confidence)
 
     # print(prediction)
