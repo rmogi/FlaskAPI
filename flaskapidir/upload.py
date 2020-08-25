@@ -3,6 +3,7 @@ import csv
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 from dataset import database_set
+from titanic import decision_tree
 
 
 # アップロードされる拡張子の制限
@@ -26,6 +27,6 @@ def _upload_file(upload_folder):
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(upload_folder, filename))
+            database_set()
             return redirect(request.url)
     return render_template('upload.html')
-database_set()
