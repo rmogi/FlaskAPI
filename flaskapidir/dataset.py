@@ -7,7 +7,7 @@ def database_set():
     engine = create_engine(
         'postgresql://postgres:Skywill99@localhost:5432/mydb', echo=True)
 
-    i = pd.read_csv('flaskapidir/uploads/test_data.csv')
+    i = pd.read_csv('uploads/test_data.csv')
     i.to_sql('test_data', engine, if_exists='replace')
 
     a = pd.read_sql_query('select * from test_data', con=engine)

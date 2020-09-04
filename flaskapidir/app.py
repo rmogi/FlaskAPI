@@ -3,7 +3,7 @@ from upload import _upload_file
 from titanic import decision_tree
 
 # ファイルアップロード先のディレクトリ
-UPLOAD_FOLDER = './flaskapidir/uploads'
+UPLOAD_FOLDER = 'uploads'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -20,4 +20,4 @@ def result():
 
 
 if __name__ == '__main__':
-    app.run(host='192.168.11.8', port=8080, debug=False)
+    app.run(host='192.168.11.8', port=8080, debug=True)
