@@ -6,10 +6,10 @@ from flask import request, redirect, url_for, render_template
 
 
 def decision_tree():
-    with open("./flaskapidir/x_traub.pickle", mode="rb") as f:
+    with open("x_traub.pickle", mode="rb") as f:
         tree = pickle.load(f)
 
-        test_data = pd.read_csv('flaskapidir/uploads/test_data.csv')
+        test_data = pd.read_csv('uploads/test_data.csv')
         print(test_data)
 
         # 「test」の説明変数の値を取得
