@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from flask import Flask
 from upload import _upload_file
 from titanic import decision_tree
@@ -20,4 +21,4 @@ def result():
 
 
 if __name__ == '__main__':
-    app.run(host='192.168.11.8', port=8080, debug=True)
+    app.run(host='192.168.56.102', port=8080, debug=True)
