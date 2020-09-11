@@ -21,4 +21,4 @@ def result():
 
 
 if __name__ == '__main__':
-    app.run(host='192.168.56.102', port=8080, debug=True)
+    app.run(host='172.31.5.100', port=8080, debug=True)
